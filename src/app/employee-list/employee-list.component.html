@@ -1,0 +1,14 @@
+<div class='list-container'>
+    <h3>Employees</h3>
+    <ul class="employees">
+        <li *ngFor="let employee of employeeList;let i = index" (click)="onSelect(employee)">
+            <div class='container'>
+                <p class="title">{{employee.fullName}}</p>
+                <button class="deleteButton" (click)='deleteEvent(i)'>Delete</button>
+                <span class="position">{{positionMap[employee.position]}}</span>
+
+            </div>
+
+        </li>
+    </ul>
+</div>

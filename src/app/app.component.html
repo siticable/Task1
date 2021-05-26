@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="empolyee-container row">
+  <div class="col-md-3">
+      <app-employee-list [employeeList]='employeeList' (selectedEmployee) = "selectedEmployeeEvent($event)"></app-employee-list>
+  </div>
+  <div class='col-md-8'>
+    <app-new-employee [employee]='displayEmployee' (saveEmployee) = 'saveEmployeeEvent($event)'></app-new-employee>
+  </div>
+</div>
+

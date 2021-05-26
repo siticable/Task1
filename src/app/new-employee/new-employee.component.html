@@ -1,0 +1,35 @@
+<div class="emp-container">
+    <div class="row">
+        <h3 class="col-md-10">Personal Information</h3>
+        <div class="col-md-2" >
+            <button (click)='addEmployee()'>{{'Add'}}</button>
+        </div>
+        
+    </div>
+
+    <form class="form" #registerForm="ngForm" (ngSubmit)="registerForm.form.valid">
+        <div class="form-group rows">
+            <label for="name">Full Name:</label>
+            <input type="text" class="form-control" required [(ngModel)]="employeeModel.fullName" name="fullName">
+        </div>
+        <div class="form-group row">
+            <label for="address">Address:</label>
+            <textarea [(ngModel)]="employeeModel.address" name ='address' required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="name">Phone Number:</label>
+            <input type='text' mask='(000) 000-0000' required [(ngModel)]="employeeModel.phoneNumber" name='phoneNumber'>
+            <!-- <input type="number" class="form-control" required [(ngModel)]="employeeModel.phoneNumber"
+                name="phoneNumber"> -->
+        </div>
+        <div class="form-group">
+            <label for="power">Position:</label>
+            <select class="form-control" id="power" required [(ngModel)]="employeeModel.position" name="position">
+                <option *ngFor="let pow of positionData" [value]="pow.id">{{pow.value}}</option>
+            </select>
+        </div>
+        <div class="form-group ">
+            <button [disabled]="!registerForm.form.valid" (click)='saveEmployeeData()'>{{(employeeModel.id) ? 'Update' : 'Save'}}</button>
+        </div>
+    </form>
+</div>

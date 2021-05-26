@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+         "fullName":"John Doe",
+         "address":"Address 1",
+         "phoneNumber":"4625162736",
+         "position":2
+    },
+    {
+        "id": 2,
+         "fullName":"John Doe11",
+         "address":"Address 1",
+         "phoneNumber":"4625162736",
+         "position":2
+    },
+    {
+        "id": 3,
+         "fullName":"John Doe12",
+         "address":"Address 1",
+         "phoneNumber":"4625162736",
+         "position":2
+    }
+   
+]

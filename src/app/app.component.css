@@ -1,0 +1,12 @@
+.employee-list-container {
+    width: 30%;
+    float: left;
+    min-height: 200px;
+}
+.employee-form-container{
+    width: 70%;
+    padding-top: 5px;
+}
+.empolyee-container{
+    padding: 25px;
+}
